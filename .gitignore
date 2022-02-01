@@ -1,0 +1,19 @@
+*~
+.#*
+
+# OS X Desktop Service Store
+.DS_Store
+
+# IDE poo
+TAGS
+.settings
+.classpath
+.project
+.idea/
+
+/bazel-*
+.vscode
+.ijwb
+
+# Local bazel overrides
+.bazelrc-local

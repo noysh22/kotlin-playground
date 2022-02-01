@@ -1,0 +1,19 @@
+load("@com_github_bazelbuild_buildtools//buildifier:def.bzl", "buildifier")
+load("@io_bazel_rules_kotlin//kotlin:core.bzl", "define_kt_toolchain", "kt_kotlinc_options")
+
+buildifier(
+    name = "buildifier",
+)
+
+kt_kotlinc_options(
+    name = "kt_kotlinc_options",
+    warn = "report",
+)
+
+define_kt_toolchain(
+    name = "kotlin_toolchain",
+    api_version = "1.5",
+    jvm_target = "11",
+    kotlinc_options = "//:kt_kotlinc_options",
+    language_version = "1.5",
+)
